@@ -1,0 +1,24 @@
+project PMD is
+
+   for Source_Dirs use ("./**");
+   for Languages use ("Opencobol");
+   for Main use ("PRJADD.COB");
+
+   package Builder is
+      for Default_Switches ("ada") use ("-g");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-g");
+   end Compiler;
+
+   package Binder is
+      for Default_Switches ("ada") use ("-g");
+   end Binder;
+
+   package Make is
+      for Makefile use "./Makefile";
+   end Make;
+
+end PMD;
+
